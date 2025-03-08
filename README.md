@@ -16,7 +16,7 @@ Manage your secrets as AES-256 encrypted (openssl) yaml files using command line
 
 ```bash
 # Assumes $PATH includes $HOME/.local/bin, add or customize as needed
-desired_version=0.1.0 && wget -qO $HOME/.local/bin/secrets https://raw.githubusercontent.com/surgiie/secrets-cli/refs/tags/v$desired_version/docker && chmod +x $HOME/.local/bin/secrets
+desired_version=0.1.0 && wget -qO $HOME/.local/bin/secrets https://raw.githubusercontent.com/surgiie/secrets-cli/refs/tags/v$desired_version/secrets && chmod u+x $HOME/.local/bin/secrets
 ```
 
 ## Usage
