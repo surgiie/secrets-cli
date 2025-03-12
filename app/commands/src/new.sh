@@ -25,7 +25,6 @@ if [ ! -z "${args[--from-yaml]}" ]; then
     else
         file_data="${args[--from-yaml]}"
     fi
-    # merge yaml from options if given
     mkdir -p "$(tmp_path)"
     echo "$yaml_data" > "$(tmp_path 1.yaml)"
     echo "$file_data" > "$(tmp_path 2.yaml)"
