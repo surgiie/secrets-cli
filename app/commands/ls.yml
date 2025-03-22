@@ -1,0 +1,13 @@
+name: ls
+help: List secrets.
+filename: commands/src/ls.sh
+dependencies:
+  - "yq"
+  - sha1sum
+filters:
+  - "ensure_default_files"
+flags:
+- long: --yaml
+  help: List secrets in as yaml instead of plain text.
+- long: --passphrase
+  help: Passphrase to use for decryption.

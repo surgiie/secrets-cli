@@ -1,0 +1,15 @@
+name: rm
+help: Remove secrets.
+filename: commands/src/rm.sh
+dependencies:
+  - "yq"
+  - sha1sum
+args:
+- name: name
+  help: The name of the secret(s).
+  required: true
+  repeatable: true
+flags:
+- long: --force
+  help: Remove the secret(s) without confirmation.
+
