@@ -1,0 +1,27 @@
+name: edit
+help: Edit secret.
+filename: commands/src/edit.sh
+catch_all: "Arbitrary options to use as key/value data for your secret file."
+dependencies:
+  - "yq"
+  - sha1sum
+args:
+- name: name
+  help: The name of the secret.
+  required: true
+
+flags:
+- long: --preview
+  help: Preview the generated yaml file without saving it.
+
+- long: --from-yaml
+  help: Use existing yaml or yaml file to create secret.
+  arg: file-or-string
+
+- long: --namespace
+  help: The namespace to store secret in.
+  arg: namespace
+
+- long: --passphrase
+  help: Passphrase to use for encryption.
+  arg: passphrase

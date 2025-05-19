@@ -1,0 +1,22 @@
+name: get
+help: Output secret.
+filename: commands/src/get.sh
+dependencies:
+  - "yq"
+  - sha1sum
+args:
+- name: name
+  help: The name of the secret to output.
+  required: true
+
+flags:
+- long: --key
+  help: Get the value for a specific key in the secret.
+  arg: yaml-key
+- long: --namespace
+  help: The namespace the secret is stored in.
+  arg: namespace
+
+- long: --passphrase
+  help: Passphrase to use for decryption.
+  arg: passphrase
