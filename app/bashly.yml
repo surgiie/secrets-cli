@@ -1,0 +1,8 @@
+name: secrets
+help: Manage secrets as encrypted yaml files.
+commands:
+  - import: app/commands/ls.yml
+  - import: app/commands/rm.yml
+  - import: app/commands/new.yml
+  - import: app/commands/get.yml
+  - import: app/commands/edit.yml
