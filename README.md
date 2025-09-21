@@ -48,11 +48,11 @@ mysecret2: my secret data 2
 Once you close your editor session, your secret will be written automatically to your secrets directory.
 
 
-# Data Location
+### Data Location
 
 All data is written to the `$HOME/.secrets` directory.
 
-# Get Secret
+### Get Secret
 
 To output secret decrypted, run the `get` command:
 
@@ -60,7 +60,7 @@ To output secret decrypted, run the `get` command:
 secrets get my-secret
 ```
 
-# Update Secret
+### Update Secret
 
 To edit and update a secreti in your editor, run the `edit` command:
 
@@ -76,6 +76,16 @@ To list out secrets run the `ls` command:
 
 ```bash
 secrets ls
+```
+
+### Remove Secret
+
+To remove a secret, run the `rm` command:
+
+```bash
+
+secrets rm my-secret # will prompt
+secrets rm my-secret --force # no prompt and force remove.
 ```
 
 ### Namespaces
