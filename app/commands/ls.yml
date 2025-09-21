@@ -1,0 +1,15 @@
+name: ls
+help: List vault item names.
+filename: commands/src/ls.sh
+dependencies:
+  - "yq"
+  - sha1sum
+filters:
+  - "ensure_default_files"
+flags:
+- long: --namespace
+  help: The namespace to store vault item in.
+  arg: namespace
+- long: --key
+  help: The encryption key to use for encryption.
+  arg: key

@@ -1,0 +1,20 @@
+name: rm
+help: Remove vault item.
+filename: commands/src/rm.sh
+dependencies:
+  - "yq"
+  - sha1sum
+filters:
+  - "ensure_default_files"
+args:
+- name: name
+  help: The name of the vault item.
+  required: true
+
+flags:
+- long: --namespace
+  help: The namespace to store vault item in.
+  arg: namespace
+
+- long: --force
+  help: Remove the secret without confirmation.

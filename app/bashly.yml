@@ -1,0 +1,8 @@
+name: secrets
+help: Manage your secrets as AES-256 encrypted files using your editor and a passphrase.
+commands:
+  - import: app/commands/new.yml
+  - import: app/commands/get.yml
+  - import: app/commands/edit.yml
+  - import: app/commands/rm.yml
+  - import: app/commands/ls.yml

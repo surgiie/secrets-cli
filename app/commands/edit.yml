@@ -1,0 +1,26 @@
+name: edit
+help: Edit vault yaml item within your editor.
+filename: commands/src/edit.sh
+dependencies:
+  - "yq"
+  - sha1sum
+filters:
+  - "ensure_default_files"
+args:
+- name: name
+  help: The name of the vault item.
+  required: true
+
+flags:
+- long: --namespace
+  help: The namespace to store vault item in.
+  arg: namespace
+
+- long: --key
+  help: The encryption key to use for encryption.
+  arg: key
+
+- long: --tmp-ext
+  help: When creating a temp file for editing, use this extension for syntax highlighting improvements.
+  default: yaml
+  arg: extension
